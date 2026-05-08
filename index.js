@@ -36,7 +36,7 @@ async function startBot() {
   cron.schedule("0 18 * * *", async () => {
     console.log("📤 Sending Status...");
 
-    const image = fs.readFileSync("./status.jpg");
+    const image = fs.readFileSync("./status.png");
 
     await sock.sendMessage("status@broadcast", {
       image,
